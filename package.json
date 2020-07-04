@@ -1,5 +1,5 @@
 {
-  "name": "revivelauncher",
+  "name": "revive",
   "version": "1.0.0",
   "productName": "Revive Launcher",
   "description": "Launcher moddé",
@@ -47,6 +47,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DraZiiXx/revivelauncher.git"
+    "url": "git+https://github.com/DraZiiXx/Revive.git"
   }
 }
