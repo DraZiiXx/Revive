@@ -220,13 +220,13 @@ class ProcessBuilder {
     /**
      * Construct a mod list json object.
      * 
-     * @param {'forge' | 'liteloader'} type The mod list type to construct.
+     * @param {'forge'} type The mod list type to construct.
      * @param {Array.<Object>} mods An array of mods to add to the mod list.
      * @param {boolean} save Optional. Whether or not we should save the mod list file.
      */
     constructModList(type, mods, save = false){
         const modList = {
-            repositoryRoot: ((type === 'forge' && this._requiresAbsolute()) ? 'absolute:' : '') + path.join(this.commonDir, 'modstore')
+            repositoryRoot: ((type === 'forge' && this._requiresAbsolute()) ? 'absolute:' : '') + path.join(this.commonDir, 'mods')
         }
 
         const ids = []
@@ -262,7 +262,7 @@ class ProcessBuilder {
         if(argStr){
             return [
                 '--fml.mavenRoots',
-                path.join('..', '..', 'common', 'modstore'),
+                path.join('..', '..', 'instances', '..', 'mods'),
                 '--fml.mods',
                 argStr
             ]
