@@ -185,7 +185,7 @@ class Module {
                 break
             case exports.Types.ForgeMod:
             case exports.Types.LiteMod:
-                this.artifact.path = path.join(ConfigManager.getCommonDirectory(), 'modstore', pth)
+                this.artifact.path = path.join(ConfigManager.getCommonDirectory(), 'mods', pth)
                 break
             case exports.Types.VersionManifest:
                 this.artifact.path = path.join(ConfigManager.getCommonDirectory(), 'versions', this.getIdentifier(), `${this.getIdentifier()}.json`)
@@ -537,7 +537,8 @@ exports.pullRemote = function(){
         return exports.pullLocal()
     }
     return new Promise((resolve, reject) => {
-        const distroURL = 'http://mc.westeroscraft.com/WesterosCraftLauncher/distribution.json'
+        const distroURL = 'http://revivepcm.fr/revive/distribution.json'
+        //const distroURL = 'http://mc.westeroscraft.com/WesterosCraftLauncher/distribution.json'
         //const distroURL = 'https://gist.githubusercontent.com/dscalzi/53b1ba7a11d26a5c353f9d5ae484b71b/raw/'
         const opts = {
             url: distroURL,
