@@ -124,7 +124,7 @@ document.getElementById('avatarOverlay').onclick = (e) => {
 
 // Bind selected account
 function updateSelectedAccount(authUser){
-    let username = 'No Account Selected'
+    let username = 'Pas de compte selectionné'
     if(authUser != null){
         if(authUser.displayName != null){
             username = authUser.displayName
@@ -144,7 +144,7 @@ function updateSelectedServer(serv){
     }
     ConfigManager.setSelectedServer(serv != null ? serv.getID() : null)
     ConfigManager.save()
-    server_selection_button.innerHTML = '\u2022 ' + (serv != null ? serv.getName() : 'No Server Selected')
+    server_selection_button.innerHTML = '\u2022 ' + (serv != null ? serv.getName() : 'Pas de serveur selectionné')
     if(getCurrentView() === VIEWS.settings){
         animateModsTabRefresh()
     }
